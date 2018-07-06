@@ -1,0 +1,13 @@
+azure-functions==1.0.0a1
+azure-functions-worker==1.0.0a3
+cycler==0.10.0
+grpcio==1.12.1
+grpcio-tools==1.12.1
+kiwisolver==1.0.1
+matplotlib==2.2.2
+numpy==1.14.5
+protobuf==3.6.0
+pyparsing==2.2.0
+python-dateutil==2.7.3
+pytz==2018.5
+six==1.11.0

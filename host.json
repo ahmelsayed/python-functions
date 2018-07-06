@@ -1,0 +1,12 @@
+{
+"logger": {
+    "categoryFilter": {
+      "defaultLevel": "Trace",
+      "categoryLevels": {
+        "Host": "Trace",
+        "Function": "Trace",
+        "Host.Aggregator": "Trace"
+      }
+    }
+  }
+}
