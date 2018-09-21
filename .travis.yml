@@ -2,6 +2,9 @@ sudo: required
 
 language: node_js
 
+node_js:
+  - "8"
+
 services:
   - docker
 
@@ -11,7 +14,7 @@ before_install:
 - curl -L https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 - sudo apt-get install -y apt-transport-https
 - sudo apt-get update && sudo apt-get install -y azure-cli wget
-- npm i -g azure-functions-core-tools --unsafe-perm
+- npm i -g azure-functions-core-tools --unsafe-perm true
 
 script:
 - ls
