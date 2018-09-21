@@ -1,5 +1,5 @@
-azure-functions==1.0.0a1
-azure-functions-worker==1.0.0a3
+azure-functions==1.0.0a4
+azure-functions-worker==1.0.0a4
 cycler==0.10.0
 grpcio==1.12.1
 grpcio-tools==1.12.1
