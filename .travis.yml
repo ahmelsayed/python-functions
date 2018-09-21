@@ -1,6 +1,6 @@
 sudo: required
 
-language: generic
+language: node_js
 
 services:
   - docker
@@ -11,9 +11,7 @@ before_install:
 - curl -L https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 - sudo apt-get install -y apt-transport-https
 - sudo apt-get update && sudo apt-get install -y azure-cli wget
-- wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
-- sudo dpkg -i packages-microsoft-prod.deb
-- sudo apt-get update && sudo apt-get install -y  azure-functions-core-tools
+- npm i -g azure-functions-core-tools --unsafe-perm
 
 script:
 - ls
