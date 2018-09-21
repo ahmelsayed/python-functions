@@ -8,21 +8,12 @@ node_js:
 services:
   - docker
 
-before_install:
+script:
 - lsb_release -a
 - echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ wheezy main" | sudo tee /etc/apt/sources.list.d/azure-cli.list
 - curl -L https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 - sudo apt-get install -y apt-transport-https
 - sudo apt-get update && sudo apt-get install -y azure-cli wget
 - npm i -g azure-functions-core-tools --unsafe-perm true
-
-script:
-- ls
-
-deploy:
-  provider: script
-  script:
-  - az login --service-principal --username "$APP_ID" --password "$PASSWORD" --tenant "$TENANT_ID"
-  - az account get-access-token --query "accessToken" | sudo func azure functionapp publish $APP_NAME --build-native-deps
-  on:
-    branch: master
+- az login --service-principal --username "$APP_ID" --password "$PASSWORD" --tenant "$TENANT_ID"
+- az account get-access-token --query "accessToken" | sudo func azure functionapp publish $APP_NAME --build-native-deps
